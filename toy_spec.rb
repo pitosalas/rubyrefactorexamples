@@ -1,6 +1,6 @@
-require_relative "movie.rb"
-require_relative "person.rb"
-require_relative "actor.rb"
+require_relative "movie"
+require_relative "person"
+require_relative "actor"
 
 
 describe Movie do
@@ -32,5 +32,7 @@ describe "a person can like a movie or an actor" do
 	describe "movie tracks who likes it" do
 		before { p1.likes(a1) }
 		it { a1.is_liked_by?(p1).should == true }
+		it {ksjdlasjdlkajsd}
+		it {jashdkajshdkjashd}
 	end
 end

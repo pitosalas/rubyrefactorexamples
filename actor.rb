@@ -1,19 +1,18 @@
+require_relative 'person'
+require_relative 'likable'
+
 class Actor
-	attr_accessor :first, :last
+	include Likable
+
 	def initialize args
-		@first = args[:first]
-		@last = args[:last]
-		@like_list = []
-	end
-	def is_liked_by? liker
-		@like_list.include? liker
+		@pers = Person.new(args)
 	end
 
-	def add_liker liker
-		@like_list << liker
+	def first
+		@pers.first
 	end
 
-	def like?
-		!@like_list.empty?
+	def last
+		@pers.last
 	end
 end
