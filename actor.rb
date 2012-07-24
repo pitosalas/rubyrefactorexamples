@@ -1,10 +1,20 @@
 class Actor
-	attr_accessor :first, :last
+	attr_accessor :type
+
 	def initialize args
-		@first = args[:first]
-		@last = args[:last]
+		@person = args[:person]
 		@like_list = []
+		@type = :general
 	end
+
+	def first
+		@person.first
+	end
+
+	def last
+		@person.last
+	end
+
 	def is_liked_by? liker
 		@like_list.include? liker
 	end
